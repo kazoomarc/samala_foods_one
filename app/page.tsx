@@ -13,7 +13,7 @@ export default function Home() {
   );
 }
 
-function Header() {
+export function Header() {
   return (
     <div className="bg-orange-500 font-medium text-base py-4">
       <div className="px-28">
