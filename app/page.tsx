@@ -1,113 +1,237 @@
-import Image from "next/image";
+/* eslint-disable react/no-unescaped-entities */
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
+    <main>
+      <Header />
+      <Hero />
+      <Testimonials />
+      <FeaturedMenus />
+      <Footer />
+    </main>
+  );
+}
+
+function Header() {
+  return (
+    <div className="bg-orange-500 font-medium text-base py-4">
+      <div className="px-28">
+        <nav className="flex justify-between">
+          <div>
+            <span>Samala</span>
+          </div>
+          <div className="flex gap-8">
+            <a href="#">Menu</a>
+            <a href="#">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  );
+}
+
+function Hero() {
+  return (
+    <div className="px-28">
+      <div className="py-16">
+        <h1 className="max-w-lg text-5xl font-thin italic font-playfair [color:#bb4b36]">
+          Samala Foods, Where Every Bite is a Delight!
+        </h1>
+        <p className="text-gray-500 mt-4 italic">
+          Discover culinary excellence at Samala Foods, where every dish is
+          crafted with fresh ingredients and passion. Join us for an
+          unforgettable dining experience in a cozy, welcoming atmosphere.
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
+      <div className="w-full [height:400px] overflow-hidden rounded-lg">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src="/images/hero-image.jpg"
+          alt="People eating at and enjoying samala foods."
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className=""
+          width={1200}
+          height={1000}
+        />
+      </div>
+    </div>
+  );
+}
+
+function TestimonialCard() {
+  return (
+    <div className="italic">
+      <p className="text-gray-500 text-balance text-base">
+        "Grace is a gem in the culinary world. The ambiance exudes
+        sophistication, while the service is attentive and warm. The dishes?
+        Pure artistry on a plate, crafted with the finest ingredients. It's a
+        haven for anyone who appreciates gourmet dining."
+      </p>
+      <p className="text-orange-400 font-medium font-playfair mt-2">
+        ~ David Martinez
+      </p>
+      <p className="text-gray-400 font-thin mt-1 text-sm/7">
+        Food Enthusiast and Connoisseur
+      </p>
+    </div>
+  );
+}
+
+function Testimonials() {
+  return (
+    <div className="px-28 py-16">
+      <div className="md:flex gap-4">
+        <TestimonialCard />
+        <TestimonialCard />
+        <TestimonialCard />
+      </div>
+    </div>
+  );
+}
+
+function MenuOverview({
+  children,
+  title,
+  img,
+  link,
+  alt,
+}: {
+  children: React.ReactNode;
+  title?: string;
+  img?: string;
+  link?: string;
+  alt?: string;
+}) {
+  return (
+    <div className="flex gap-5 justify-center _bg-yellow-500">
+      <div className="relative flex ml-0 overflow-hidden w-96 shrink-0 aspect-square">
+        <img
+          src={img}
+          className="absolute inset-x-0 top-0 object-cover w-full aspect-square"
+          alt=""
         />
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="flex flex-col justify-between _bg-lime-400">
+        <div>
+          <h2 className="font-medium text-3xl py-4 font-playfair">{title}</h2>
+          <p className="wrap">{children}</p>
+        </div>
+        <div>
+          <div className="inline-flex py-3 px-4 text-white bg-gray-950">
+            <a className="text-sm font-light font-mono">see menu</a>
+            <AwayArrow className="size-4 -mb-1" />
+          </div>
+        </div>
       </div>
-    </main>
+    </div>
+  );
+}
+function FeaturedMenus() {
+  return (
+    <div className="px-28 _bg-red-700 py-10">
+      <div className="flex flex-col gap-10">
+        <MenuOverview
+          title="Enjoy Dates with Your Loved Ones"
+          img="images/feature-4.jpg"
+          alt="alt"
+        >
+          Make plans for your dinner at Samala Foods, where every meal is a
+          celebration of flavors and memories.
+        </MenuOverview>
+        <MenuOverview
+          title="Breakfast Delights"
+          img="images/feature-2.jpg"
+          alt="alt"
+        >
+          Start your day with our delicious breakfast options, featuring fresh
+          ingredients and delightful combinations.
+        </MenuOverview>
+        <MenuOverview
+          title="Lunch Favorites"
+          img="images/feature-3.jpg"
+          alt="alt"
+        >
+          Discover our lunch specials that bring together the best of culinary
+          creativity and seasonal ingredients.
+        </MenuOverview>
+        <MenuOverview
+          title="Dinner Extravaganza"
+          img="images/feature-4.jpg"
+          alt="alt"
+        >
+          Indulge in our dinner offerings, perfect for romantic evenings, family
+          gatherings, or special celebrations.
+        </MenuOverview>
+        <MenuOverview
+          title="Desserts & Drinks"
+          img="images/feature-5.jpg"
+          alt="alt"
+        >
+          End your meal on a sweet note with our decadent desserts and
+          refreshing drinks, crafted to perfection.
+        </MenuOverview>
+      </div>
+    </div>
+  );
+}
+
+function Footer() {
+  return (
+    <div className="mt-14">
+      <div
+        id="contact"
+        className="px-28 py-12 bg-orange-400 text-white flex justify-end gap-24"
+      >
+        <div className="">
+          <h3 className="font-bold">contact</h3>
+          <div className="space-y-1 mt-3">
+            <p className="text-xs font-mono">info@samalafoods.com</p>
+            <p className="text-xs font-mono">(265) 889-9955-88</p>
+            <p className="text-xs font-mono">(265) 983-2285-22</p>
+          </div>
+        </div>
+
+        <div className="">
+          <h3 className="font-bold">social</h3>
+          <div className="space-y-1 mt-3">
+            <div className="text-xs font-mono flex gap-[2px]">
+              <span>(X) twitter</span>
+              <AwayArrow className="size-2" />
+            </div>
+            <div className="text-xs font-mono flex gap-[2px]">
+              <span>instagram</span>
+              <AwayArrow className="size-2" />
+            </div>
+
+            <div className="text-xs font-mono flex gap-[2px]">
+              <span>facebook </span>
+              <AwayArrow className="size-2" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="px-28 text-xs py-4 text-white bg-orange-500">
+        <span>
+          <a href="#" className="font-mono">
+            &copy; Joel Mwala 2024
+          </a>
+        </span>
+      </div>
+    </div>
+  );
+}
+
+function AwayArrow({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 16 16" fill="currentColor" className={className}>
+      <path
+        fillRule="evenodd"
+        d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0Z"
+        clipRule="evenodd"
+      />
+    </svg>
   );
 }
