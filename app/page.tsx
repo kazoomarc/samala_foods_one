@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -19,12 +20,14 @@ export function Header() {
       <div className="px-28">
         <nav className="flex justify-between">
           <div>
-            <span>Samala</span>
+            <span>
+              <Link href={'/'}>Samala</Link>
+            </span>
           </div>
           <div className="flex gap-8">
-            <a href="#">Menu</a>
-            <a href="#">About</a>
-            <a href="#contact">Contact</a>
+            <Link href="/menu">Menu</Link>
+            <Link href="/about">About</Link>
+            <Link href="/contact">Contact</Link>
           </div>
         </nav>
       </div>
@@ -36,7 +39,7 @@ function Hero() {
   return (
     <div className="px-28">
       <div className="py-16">
-        <h1 className="max-w-lg text-5xl font-thin italic font-playfair [color:#bb4b36]">
+        <h1 className="max-w-lg text-5xl font-thin italic font-playfair text-orange-500 ">
           Samala Foods, Where Every Bite is a Delight!
         </h1>
         <p className="text-gray-500 mt-4 italic">
@@ -178,7 +181,7 @@ function FeaturedMenus() {
   );
 }
 
-function Footer() {
+export function Footer() {
   return (
     <div className="mt-14">
       <div
