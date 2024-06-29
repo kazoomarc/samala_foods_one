@@ -53,7 +53,7 @@ function ContactDirections() {
 // }
 
 function Contacts() {
-  const MAPS_KEY = process.env.NEXT_PUBLIC_MAPS_KEY;
+  const MAPS_KEY = process.env.NEXT_PUBLIC_MAPS_KEY || '';
 
   // const MAPS_KEY = 'AIzaSyA3Tv9W_Ngs8sIy-9uzllnRIVI5OgKAaEg';
 
