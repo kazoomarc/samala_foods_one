@@ -57,8 +57,7 @@ function Contacts() {
 
   // const MAPS_KEY = 'AIzaSyA3Tv9W_Ngs8sIy-9uzllnRIVI5OgKAaEg';
 
-  const mangoURL =
-    'https://www.google.com/maps/place/Mango+Lodge/@-15.385597,35.317471,15z/data=!4m9!3m8!1s0x18d904b882f7afcb:0x1d94dbf834d5b7a5!5m2!4m1!1i2!8m2!3d-15.3815823!4d35.3245569!16s%2Fg%2F11ggb8fr60?hl=en-GB&entry=ttu';
+  const mangoURL = 'https://maps.app.goo.gl/v26ZjJxermjkh4D66';
 
   const mapContainerStyle = {
     width: '100%',
@@ -86,7 +85,7 @@ function Contacts() {
             url="https://www.x.com"
           />
           <ContactBox
-            title="(X) TWITTER"
+            title="TWITTER"
             name="@samala_foods"
             url="https://www.x.com"
           />
@@ -125,7 +124,7 @@ function ContactBox({
   return (
     <div>
       <Link href={url} target="_blank">
-        <div className="flex justify-between border-b border-gray-700 px-4 py-3">
+        <div className="flex justify-between border-b  tracking-tight border-gray-700 px-4 py-3">
           <div>{title}</div>
           <div className="inline-flex gap-3">
             <span className="">{name}</span>
