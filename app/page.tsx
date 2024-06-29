@@ -90,7 +90,7 @@ function MenuOverview({
   alt?: string;
 }) {
   return (
-    <div className="flex justify-center gap-5 _bg-yellow-500">
+    <div className="flex justify-center gap-5  _bg-yellow-500">
       <div className="relative flex ml-0 overflow-hidden w-96 shrink-0 aspect-square">
         <img
           src={img}
@@ -101,12 +101,16 @@ function MenuOverview({
 
       <div className="flex flex-col justify-between _bg-lime-400">
         <div>
-          <h2 className="py-4 text-3xl font-medium font-playfair">{title}</h2>
-          <p className="wrap">{children}</p>
+          <h2 className="pt-4 pb-2 text-3xl font-medium max-w-72 font-playfair">
+            {title}
+          </h2>
+          <p className="wrap text-gray-500 max-w-72">{children}</p>
         </div>
         <div>
           <div className="inline-flex px-4 py-3 text-white bg-gray-950">
-            <a className="font-mono text-sm font-light">see menu</a>
+            <a className="font-mono text-sm font-light" href={link}>
+              see menu
+            </a>
             <AwayArrow className="-mb-1 size-4" />
           </div>
         </div>
@@ -117,10 +121,11 @@ function MenuOverview({
 function FeaturedMenus() {
   return (
     <div className="py-10 px-28 _bg-red-700">
-      <div className="flex flex-col gap-10">
+      <div className="flex  flex-col gap-10">
         <MenuOverview
           title="Enjoy Dates with Your Loved Ones"
           img="images/feature-4.jpg"
+          link="/menu"
           alt="alt"
         >
           Make plans for your dinner at Samala Foods, where every meal is a
@@ -129,6 +134,7 @@ function FeaturedMenus() {
         <MenuOverview
           title="Breakfast Delights"
           img="images/feature-2.jpg"
+          link="/menu#breakfast"
           alt="alt"
         >
           Start your day with our delicious breakfast options, featuring fresh
@@ -137,6 +143,7 @@ function FeaturedMenus() {
         <MenuOverview
           title="Lunch Favorites"
           img="images/feature-3.jpg"
+          link="/menu#lunch"
           alt="alt"
         >
           Discover our lunch specials that bring together the best of culinary
@@ -145,6 +152,7 @@ function FeaturedMenus() {
         <MenuOverview
           title="Dinner Extravaganza"
           img="images/feature-4.jpg"
+          link="/menu#dinner"
           alt="alt"
         >
           Indulge in our dinner offerings, perfect for romantic evenings, family
@@ -153,6 +161,7 @@ function FeaturedMenus() {
         <MenuOverview
           title="Desserts & Drinks"
           img="images/feature-5.jpg"
+          link="/menu#desserts"
           alt="alt"
         >
           End your meal on a sweet note with our decadent desserts and
