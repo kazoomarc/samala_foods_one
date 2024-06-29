@@ -15,7 +15,7 @@ function AboutStory() {
   return (
     <div className="px-28 py-10">
       <div>
-        <h1>SAMALA</h1>
+        <h1 className="text-3xl font-playfair font-bold">SAMALA</h1>
         <p>
           Welcome to Samala Foods, your perfect spot for memorable meals and
           great company. Nestled in the heart of Zomba, our restaurant is the
