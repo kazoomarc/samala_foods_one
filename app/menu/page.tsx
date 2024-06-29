@@ -21,15 +21,15 @@ function Menu() {
             Break Fast
           </h2>
           <div className="grid grid-cols-3 gap-10">
-            <MenuCard name="Sunrise Delight">
+            <MenuCard name="Sunrise Delight" price="4,200">
               A delicious blend of scrambled eggs, crispy bacon, and buttery
               toast to start your day.
             </MenuCard>
-            <MenuCard name="Tropical Fruit Bowl">
+            <MenuCard name="Tropical Fruit Bowl" price="3,800">
               A refreshing mix of seasonal fruits topped with a dollop of Greek
               yogurt and honey.
             </MenuCard>
-            <MenuCard name="Malawian Porridge">
+            <MenuCard name="Malawian Porridge" price="2,400">
               Traditional Malawian porridge made from maize flour, served with a
               side of sugar and milk.
             </MenuCard>
@@ -41,15 +41,15 @@ function Menu() {
             Lunch
           </h2>
           <div className="grid grid-cols-3 gap-10">
-            <MenuCard name=" Chambo Delight">
+            <MenuCard name=" Chambo Delight" price="14,500">
               Fresh Chambo fish grilled to perfection, served with rice and
               fresh seasonal vegetables from our gardens.
             </MenuCard>
-            <MenuCard name="Beef Stir-Fry">
+            <MenuCard name="Beef Stir-Fry" price="12,000">
               Tender strips of beef stir-fried with colorful bell peppers and
               onions, served with jasmine rice.
             </MenuCard>
-            <MenuCard name="Veggie Wrap">
+            <MenuCard name="Veggie Wrap" price="8,500">
               A healthy wrap filled with grilled vegetables, hummus, and a hint
               of spice.
             </MenuCard>
@@ -61,15 +61,15 @@ function Menu() {
             Dinner
           </h2>
           <div className="grid grid-cols-3 gap-10">
-            <MenuCard name="Malawian Chicken Curry">
+            <MenuCard name="Malawian Chicken Curry" price="22,000">
               Spicy chicken curry made with local spices, served with rice and a
               side of naan.
             </MenuCard>
-            <MenuCard name="Grilled Lamb Chops">
+            <MenuCard name="Grilled Lamb Chops" price="28,000">
               Succulent lamb chops grilled to your liking, served with mashed
               potatoes and steamed vegetables.
             </MenuCard>
-            <MenuCard name="Vegetarian Lasagna">
+            <MenuCard name="Vegetarian Lasagna" price="15,000">
               Layers of pasta, fresh vegetables, and creamy cheese baked to
               golden perfection.
             </MenuCard>
@@ -81,15 +81,15 @@ function Menu() {
             Drinks
           </h2>
           <div className="grid grid-cols-3 gap-10">
-            <MenuCard name="Mango Smoothie">
+            <MenuCard name="Mango Smoothie" price="3,500">
               A refreshing smoothie made with fresh locally grown mangoes,
               yogurt, and a hint of honey.
             </MenuCard>
-            <MenuCard name="Espresso">
+            <MenuCard name="Espresso" price="2,400">
               A strong, extravagant and rich espresso made from freshly ground
               beans here in Malawi.
             </MenuCard>
-            <MenuCard name=" Fresh Lemonade">
+            <MenuCard name=" Fresh Lemonade" price="3,000">
               A zesty lemonade made with fresh lemons mint, and a touch of
               sweetness from our organic farms.
             </MenuCard>
@@ -102,15 +102,15 @@ function Menu() {
           </h2>
           <div className="grid grid-cols-3 gap-10">
             {/*NOTE: */}
-            <MenuCard name="Malawian Banana Fritters">
+            <MenuCard name="Malawian Banana Fritters" price="5,000">
               Sweet banana fritters drizzled with honey and served with vanilla
               ice cream.
             </MenuCard>
-            <MenuCard name="Chocolate Lava Cake ">
+            <MenuCard name="Chocolate Lava Cake" price="8,000">
               A warm chocolate cake with a gooey center, served with a scoop of
               vanilla ice cream.
             </MenuCard>
-            <MenuCard name="Fresh Fruit Salad">
+            <MenuCard name="Fresh Fruit Salad" price="4,200">
               A mix of seasonal fruits including pears, tamalind served with a
               light syrup and a sprinkle of mint.
             </MenuCard>
@@ -138,10 +138,10 @@ function MenuCard({
         <img src="/images/breakfast-1.jpg" alt="alt text here" />
       </div>
       <div className="relative left-0 bottom-0 bg-slate-400 px-4 py-3">
-        <h3 className="text-2xl">{name}</h3>
-        <p>{children}</p>
+        <h3 className="text-xl font-bold">{name}</h3>
+        <p className="font-thin font-medium">{children}</p>
         <div className="inline-flex mt-4 px-4 py-3 text-white bg-gray-950">
-          <span className="font-mono text-sm font-light">MWK 4,200</span>
+          <span className="font-mono text-sm font-light">MWK {price}</span>
         </div>
       </div>
     </div>
