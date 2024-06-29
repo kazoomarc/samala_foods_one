@@ -6,8 +6,8 @@ export default function Header() {
       <div className="px-28">
         <nav className="flex justify-between">
           <div>
-            <span>
-              <Link href={'/'}>Samala</Link>
+            <span className="font-playfair">
+              <Link href={'/'}>SAMALA</Link>
             </span>
           </div>
           <div className="flex gap-8">
