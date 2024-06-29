@@ -22,14 +22,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} h-full`}>
       <head>
         <link
           rel="stylesheet"
           href="https://api.fontshare.com/css?f[]=switzer@400,500,600&display=swap"
         />
       </head>
-      <body className="font-switzer">{children}</body>
+      <body className="font-switzer flex flex-col justify-between h-full">
+        {children}
+      </body>
     </html>
   );
 }
