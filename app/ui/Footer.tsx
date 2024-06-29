@@ -5,8 +5,27 @@ export default function Footer() {
     <div className="mb-0 mt-14">
       <div
         id="contact"
-        className="flex justify-end gap-24 py-12 text-white bg-orange-400 px-28"
+        className="flex justify-end gap-24 py-12 _text-white _bg-orange-400 bg-gray-300 px-28"
       >
+        <div className="">
+          <h3 className="font-bold">opening hours</h3>
+
+          <div className="mt-3 space-y-1">
+            <p className="font-mono text-xs">BREAKFAST</p>
+            <p className="font-mono text-xs">7:00 - 9:00</p>
+          </div>
+
+          <div className="mt-3 space-y-1">
+            <p className="font-mono text-xs">LUNCH</p>
+            <p className="font-mono text-xs">11:00 - 2:00</p>
+          </div>
+
+          <div className="mt-3 space-y-1">
+            <p className="font-mono text-xs">DINNER</p>
+            <p className="font-mono text-xs">06:00 - 11:00</p>
+          </div>
+        </div>
+
         <div className="">
           <h3 className="font-bold">contact</h3>
           <div className="mt-3 space-y-1">
@@ -35,7 +54,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="py-4 text-xs text-white bg-orange-500 px-28">
+      <div className="py-4 text-xs text-white _bg-orange-500 bg-black px-28">
         <span>
           <a href="#" className="font-mono">
             &copy; Joel Mwala 2024
