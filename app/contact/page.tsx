@@ -2,17 +2,13 @@
 import { useEffect } from 'react';
 import { GoogleMap, Marker, LoadScript } from '@react-google-maps/api';
 import AwayArrow from '../ui/AwayArrow';
-import Footer from '../ui/Footer';
-import Header from '../ui/Header';
 import Link from 'next/link';
 
 export default function Home() {
   return (
     <>
-      <Header />
       <ContactDirections />
       <Contacts />
-      <Footer />
     </>
   );
 }
@@ -32,25 +28,6 @@ function ContactDirections() {
     </div>
   );
 }
-
-// function Contacts() {
-//   const MAPS_KEY = process.env.NEXT_PUBLIC_MAPS_KEY;
-
-//   // Use apiKey in your Google Maps components or API calls
-
-//   return (
-//     <div className="px-28 py-10 font-mono">
-//       <div className="flex flex-col text-gray-600 border-t border-x border-gray-700">
-//         <ContactBox title="INSTAGRAM" name="@samala_foods" />
-//         <ContactBox title="EMAIL" name="info@samalafoods.com" />
-//         <ContactBox title="(X) TWITTER" name="@samala_foods" />
-//         <ContactBox title="FACEBOOK" name="samala_foods" />
-//         <ContactBox title="DIRECTION" name="google_maps" />
-//       </div>
-//       <div id="map" className="w-full h-52"></div>
-//     </div>
-//   );
-// }
 
 function Contacts() {
   const MAPS_KEY = process.env.NEXT_PUBLIC_MAPS_KEY || '';
