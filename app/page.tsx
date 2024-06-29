@@ -1,6 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
 import Link from 'next/link';
+import Header from './ui/Header';
+import AwayArrow from './ui/AwayArrow';
+import Footer from './ui/Footer';
 
 export default function Home() {
   return (
@@ -14,35 +17,14 @@ export default function Home() {
   );
 }
 
-export function Header() {
-  return (
-    <div className="bg-orange-500 font-medium text-base py-4">
-      <div className="px-28">
-        <nav className="flex justify-between">
-          <div>
-            <span>
-              <Link href={'/'}>Samala</Link>
-            </span>
-          </div>
-          <div className="flex gap-8">
-            <Link href="/menu">Menu</Link>
-            <Link href="/about">About</Link>
-            <Link href="/contact">Contact</Link>
-          </div>
-        </nav>
-      </div>
-    </div>
-  );
-}
-
 function Hero() {
   return (
     <div className="px-28">
       <div className="py-16">
-        <h1 className="max-w-lg text-5xl font-thin italic font-playfair text-orange-500 ">
+        <h1 className="max-w-lg text-5xl italic font-thin text-orange-500 font-playfair ">
           Samala Foods, Where Every Bite is a Delight!
         </h1>
-        <p className="text-gray-500 mt-4 italic">
+        <p className="mt-4 italic text-gray-500">
           Discover culinary excellence at Samala Foods, where every dish is
           crafted with fresh ingredients and passion. Join us for an
           unforgettable dining experience in a cozy, welcoming atmosphere.
@@ -66,16 +48,16 @@ function Hero() {
 function TestimonialCard() {
   return (
     <div className="italic">
-      <p className="text-gray-500 text-balance text-base">
+      <p className="text-base text-gray-500 text-balance">
         "Grace is a gem in the culinary world. The ambiance exudes
         sophistication, while the service is attentive and warm. The dishes?
         Pure artistry on a plate, crafted with the finest ingredients. It's a
         haven for anyone who appreciates gourmet dining."
       </p>
-      <p className="text-orange-400 font-medium font-playfair mt-2">
+      <p className="mt-2 font-medium text-orange-400 font-playfair">
         ~ David Martinez
       </p>
-      <p className="text-gray-400 font-thin mt-1 text-sm/7">
+      <p className="mt-1 font-thin text-gray-400 text-sm/7">
         Food Enthusiast and Connoisseur
       </p>
     </div>
@@ -84,8 +66,8 @@ function TestimonialCard() {
 
 function Testimonials() {
   return (
-    <div className="px-28 py-16">
-      <div className="md:flex gap-4">
+    <div className="py-16 px-28">
+      <div className="gap-4 md:flex">
         <TestimonialCard />
         <TestimonialCard />
         <TestimonialCard />
@@ -108,7 +90,7 @@ function MenuOverview({
   alt?: string;
 }) {
   return (
-    <div className="flex gap-5 justify-center _bg-yellow-500">
+    <div className="flex justify-center gap-5 _bg-yellow-500">
       <div className="relative flex ml-0 overflow-hidden w-96 shrink-0 aspect-square">
         <img
           src={img}
@@ -119,13 +101,13 @@ function MenuOverview({
 
       <div className="flex flex-col justify-between _bg-lime-400">
         <div>
-          <h2 className="font-medium text-3xl py-4 font-playfair">{title}</h2>
+          <h2 className="py-4 text-3xl font-medium font-playfair">{title}</h2>
           <p className="wrap">{children}</p>
         </div>
         <div>
-          <div className="inline-flex py-3 px-4 text-white bg-gray-950">
-            <a className="text-sm font-light font-mono">see menu</a>
-            <AwayArrow className="size-4 -mb-1" />
+          <div className="inline-flex px-4 py-3 text-white bg-gray-950">
+            <a className="font-mono text-sm font-light">see menu</a>
+            <AwayArrow className="-mb-1 size-4" />
           </div>
         </div>
       </div>
@@ -134,7 +116,7 @@ function MenuOverview({
 }
 function FeaturedMenus() {
   return (
-    <div className="px-28 _bg-red-700 py-10">
+    <div className="py-10 px-28 _bg-red-700">
       <div className="flex flex-col gap-10">
         <MenuOverview
           title="Enjoy Dates with Your Loved Ones"
@@ -178,63 +160,5 @@ function FeaturedMenus() {
         </MenuOverview>
       </div>
     </div>
-  );
-}
-
-export function Footer() {
-  return (
-    <div className="mt-14 mb-0">
-      <div
-        id="contact"
-        className="px-28 py-12 bg-orange-400 text-white flex justify-end gap-24"
-      >
-        <div className="">
-          <h3 className="font-bold">contact</h3>
-          <div className="space-y-1 mt-3">
-            <p className="text-xs font-mono">info@samalafoods.com</p>
-            <p className="text-xs font-mono">(265) 889-9955-88</p>
-            <p className="text-xs font-mono">(265) 983-2285-22</p>
-          </div>
-        </div>
-
-        <div className="">
-          <h3 className="font-bold">social</h3>
-          <div className="space-y-1 mt-3">
-            <div className="text-xs font-mono flex gap-[2px]">
-              <span>(X) twitter</span>
-              <AwayArrow className="size-2" />
-            </div>
-            <div className="text-xs font-mono flex gap-[2px]">
-              <span>instagram</span>
-              <AwayArrow className="size-2" />
-            </div>
-
-            <div className="text-xs font-mono flex gap-[2px]">
-              <span>facebook </span>
-              <AwayArrow className="size-2" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="px-28 text-xs py-4 text-white bg-orange-500">
-        <span>
-          <a href="#" className="font-mono">
-            &copy; Joel Mwala 2024
-          </a>
-        </span>
-      </div>
-    </div>
-  );
-}
-
-function AwayArrow({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 16 16" fill="currentColor" className={className}>
-      <path
-        fillRule="evenodd"
-        d="M4.22 11.78a.75.75 0 0 1 0-1.06L9.44 5.5H5.75a.75.75 0 0 1 0-1.5h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V6.56l-5.22 5.22a.75.75 0 0 1-1.06 0Z"
-        clipRule="evenodd"
-      />
-    </svg>
   );
 }

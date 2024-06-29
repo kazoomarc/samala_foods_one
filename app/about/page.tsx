@@ -1,4 +1,5 @@
-import { Footer, Header } from '../page';
+import Footer from '../ui/Footer';
+import Header from '../ui/Header';
 
 export default function Home() {
   return (
