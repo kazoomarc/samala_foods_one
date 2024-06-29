@@ -183,7 +183,7 @@ function FeaturedMenus() {
 
 export function Footer() {
   return (
-    <div className="mt-14">
+    <div className="mt-14 mb-0">
       <div
         id="contact"
         className="px-28 py-12 bg-orange-400 text-white flex justify-end gap-24"
