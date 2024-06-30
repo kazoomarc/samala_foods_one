@@ -11,12 +11,12 @@ export default function Home() {
 function Menu() {
   return (
     <div>
-      <div className="px-28 py-10 _bg-orange-800">
+      <div className="px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28 py-10 _bg-orange-800">
         <div id="breakfast" className="mt-8">
-          <h2 className="text-4xl font-medium font-playfair text-orange-500">
+          <h2 className="text-4xl font-medium font-playfair text-orange-500 mb-6">
             Break Fast
           </h2>
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 ">
             <MenuCard name="Sunrise Delight" price="4,200">
               A delicious blend of scrambled eggs, crispy bacon, and buttery
               toast to start your day.
@@ -33,13 +33,13 @@ function Menu() {
         </div>
 
         <div id="lunch" className="mt-16">
-          <h2 className="text-4xl font-medium font-playfair text-orange-500">
+          <h2 className="text-4xl font-medium font-playfair text-orange-500 mb-6">
             Lunch
           </h2>
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 ">
             <MenuCard name=" Chambo Delight" price="14,500">
               Fresh Chambo fish grilled to perfection, served with rice and
-              fresh seasonal vegetables from our gardens.
+              fresh seasonal vegetables.
             </MenuCard>
             <MenuCard name="Beef Stir-Fry" price="12,000">
               Tender strips of beef stir-fried with colorful bell peppers and
@@ -53,11 +53,11 @@ function Menu() {
         </div>
 
         <div id="dinner" className="mt-16">
-          <h2 className="text-4xl font-medium font-playfair text-orange-500">
+          <h2 className="text-4xl font-medium font-playfair text-orange-500 mb-6">
             Dinner
           </h2>
-          <div className="grid grid-cols-3 gap-10">
-            <MenuCard name="Malawian Chicken Curry" price="22,000">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 ">
+            <MenuCard name="Chicken Khwasu" price="22,000">
               Spicy chicken curry made with local spices, served with rice and a
               side of naan.
             </MenuCard>
@@ -73,10 +73,10 @@ function Menu() {
         </div>
 
         <div id="drinks" className="mt-16">
-          <h2 className="text-4xl font-medium font-playfair text-orange-500">
+          <h2 className="text-4xl font-medium font-playfair text-orange-500 mb-6">
             Drinks
           </h2>
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 ">
             <MenuCard name="Mango Smoothie" price="3,500">
               A refreshing smoothie made with fresh locally grown mangoes,
               yogurt, and a hint of honey.
@@ -93,12 +93,12 @@ function Menu() {
         </div>
 
         <div id="desserts" className="mt-16">
-          <h2 className="text-4xl font-medium font-playfair text-orange-500">
+          <h2 className="text-4xl font-medium font-playfair text-orange-500  mb-6">
             Desserts
           </h2>
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 ">
             {/*NOTE: */}
-            <MenuCard name="Malawian Banana Fritters" price="5,000">
+            <MenuCard name="Banana Fritters" price="5,000">
               Sweet banana fritters drizzled with honey and served with vanilla
               ice cream.
             </MenuCard>
@@ -118,7 +118,7 @@ function Menu() {
   );
 }
 
-function MenuCard({
+function _MenuCard({
   name,
   children,
   price,
@@ -135,9 +135,49 @@ function MenuCard({
       </div>
       <div className="relative left-0 bottom-0 bg-slate-400 px-4 py-3">
         <h3 className="text-xl font-bold">{name}</h3>
-        <p className="font-thin font-medium">{children}</p>
+        <p className="font-thin _font-medium">{children}</p>
         <div className="inline-flex mt-4 px-4 py-3 text-white bg-gray-950">
           <span className="font-mono text-sm font-light">MWK {price}</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MenuCard({
+  children,
+  name,
+  img,
+  price,
+  alt,
+}: {
+  name?: string;
+  img?: string;
+  alt?: string;
+  children: React.ReactNode;
+  price?: string;
+}) {
+  return (
+    <div className="flex flex-col _justify-center gap-5 ring ring-black/5 bg-white">
+      <div className="relative flex ml-0 overflow-hidden _w-96 flex-shrink-0 md:shrink-0 aspect-square">
+        <img
+          src="/images/breakfast-1.jpg"
+          className="absolute inset-0 top-0 object-cover w-full aspect-square"
+          alt=""
+        />
+      </div>
+
+      <div className="flex flex-col px-3 pb-4 justify-between _bg-lime-400">
+        <div>
+          <h2 className="md:pt-1 pb-1 md:pb-2 text-lg md:text-3xl font-medium _leading-5 max-w-72 font-playfair">
+            {name}
+          </h2>
+          <p className="wrap text-gray-500  text-xs max-w-72">{children}</p>
+        </div>
+        <div className="mt-4">
+          <div className="inline-flex px-2 py-1 md:px-4 md:py-3 text-white bg-gray-950">
+            <span className="font-mono text-sm font-light">MWK {price}</span>
+          </div>
         </div>
       </div>
     </div>
