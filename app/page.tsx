@@ -43,20 +43,23 @@ function Hero() {
   );
 }
 
-function TestimonialCard() {
+function TestimonialCard({
+  children,
+  name,
+  title,
+}: {
+  children?: React.ReactNode;
+  name?: string;
+  title?: string;
+}) {
   return (
     <div className="mt-6 md:mt-0 md:px-2 italic">
-      <p className="text-base text-gray-500 text-balance">
-        "Grace is a gem in the culinary world. The ambiance exudes
-        sophistication, while the service is attentive and warm. The dishes?
-        Pure artistry on a plate, crafted with the finest ingredients. It's a
-        haven for anyone who appreciates gourmet dining."
-      </p>
+      <p className="text-base text-gray-500 text-balance">"{children}"</p>
       <p className="sm:mt-2 text-base font-medium text-orange-400 font-playfair">
-        ~ David Martinez
+        ~ {name}
       </p>
       <p className="-mt-2 md:-mt-1 font-thin text-gray-400 text-xs/7">
-        Food Enthusiast and Connoisseur
+        {title}
       </p>
     </div>
   );
@@ -69,9 +72,28 @@ function Testimonials() {
         Testimonials
       </h2>
       <div className="md:gap-4 sm:flex">
-        <TestimonialCard />
-        <TestimonialCard />
-        <TestimonialCard />
+        <TestimonialCard
+          name="David Banda"
+          title="Food Enthusiast and Connoisseur"
+        >
+          Grace is a gem in the culinary world. The ambiance exudes
+          sophistication, while the service is attentive and warm. The dishes?
+          Pure artistry on a plate, crafted with the finest ingredients. It's a
+          haven for anyone who appreciates gourmet dining.
+        </TestimonialCard>
+        <TestimonialCard name="Chisomo Johnson" title="Travel Writer">
+          Having experienced dining at numerous top-notch establishments, Grace
+          is a standout. The atmosphere is both inviting and refined,
+          complemented perfectly by flawless service. The culinary experience
+          surpassed all expectations—each dish a masterpiece of flavor and
+          presentation.
+        </TestimonialCard>
+        <TestimonialCard name="Emily Bango" title="Food Critic and Blogger">
+          I've been fortunate to dine at many fine restaurants, but Grace stands
+          out as truly exceptional. The attention to detail, from the elegant
+          ambiance to the impeccable service, is unparalleled. And the food?
+          Absolutely divine. A must-visit for any food enthusiast.
+        </TestimonialCard>
       </div>
     </div>
   );
