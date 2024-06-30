@@ -15,7 +15,7 @@ export default function Home() {
 
 function ContactDirections() {
   return (
-    <div className="px-28 py-10">
+    <div className=" px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28 py-10">
       <div className="flex flex-col gap-10 items-center">
         <h1 className="text-7xl font-playfair text-gray-800">Contact</h1>
         <p className="max-w-md tracking-wide text-center text-gray-600">
@@ -48,7 +48,7 @@ function Contacts() {
   };
 
   return (
-    <div className="px-28 py-10 font-mono">
+    <div className="px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28 py-10 font-mono">
       <div className="text-gray-600 border border-gray-700">
         <div className="flex flex-col ">
           <ContactBox
