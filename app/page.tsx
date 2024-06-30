@@ -119,6 +119,7 @@ function MenuOverview({
     </div>
   );
 }
+
 function FeaturedMenus() {
   return (
     <div className="py-10 px-4 _hidden sm:block sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28 _bg-gray-100/95">
