@@ -3,12 +3,9 @@ import AwayArrow from './AwayArrow';
 export default function Footer() {
   return (
     <div className="mb-0 mt-14">
-      <div
-        id="contact"
-        className="sm:flex justify-between md:justify-end gap-24 py-12 _text-white _bg-orange-400 bg-gray-300 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28"
-      >
-        <div className="">
-          <h3 className="font-bold">opening hours</h3>
+      <div className="justify-between gap-24 px-4 py-12 bg-gray-300 _sm:flex _sm:flex-wrap md:justify-end _text-white _bg-orange-400 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28">
+        <div className="mt-6 md:mt-0">
+          <h3 className="font-bold _text-2xl _sm:text-base ">opening hours</h3>
 
           <div className="mt-3 space-y-1">
             <p className="font-mono text-xs">BREAKFAST</p>
@@ -26,8 +23,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="">
-          <h3 className="font-bold">contact</h3>
+        <div className="mt-6 md:mt-0">
+          <h3 className="font-bold _text-2xl _sm:text-base">contact</h3>
           <div className="mt-3 space-y-1">
             <p className="font-mono text-xs">info@samalafoods.com</p>
             <p className="font-mono text-xs">(265) 889-9955-88</p>
@@ -35,8 +32,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="">
-          <h3 className="font-bold">social</h3>
+        <div className="mt-6 md:mt-0">
+          <h3 className="font-bold _text-2xl _sm:text-base">social</h3>
           <div className="mt-3 space-y-1">
             <div className="text-xs font-mono flex gap-[2px]">
               <span>(X) twitter</span>
@@ -54,7 +51,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="py-4 text-xs text-white _bg-orange-500 bg-black px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28">
+      <div className="px-4 py-4 text-xs text-white bg-black _bg-orange-500 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28">
         <span>
           <a href="#" className="font-mono">
             &copy; Joel Mwala 2024
