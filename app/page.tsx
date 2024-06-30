@@ -17,9 +17,9 @@ export default function Home() {
 
 function Hero() {
   return (
-    <div className="px-28">
-      <div className="py-16">
-        <h1 className="max-w-lg text-5xl italic font-thin text-orange-500 font-playfair ">
+    <div className="px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28">
+      <div className="py-6 md:py-16">
+        <h1 className="max-w-lg text-3xl sm:text-5xl italic font-thin text-orange-600 font-playfair ">
           Samala Foods, Where Every Bite is a Delight!
         </h1>
         <p className="mt-4 italic text-gray-500">
@@ -29,13 +29,13 @@ function Hero() {
         </p>
       </div>
 
-      <div className="w-full [height:400px] overflow-hidden rounded-lg">
+      <div className="w-full [_height:400px] overflow-hidden rounded-lg">
         <Image
           src="/images/hero-image.jpg"
           alt="People eating at and enjoying samala foods."
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className=""
-          width={1200}
+          width={2200}
           height={1000}
         />
       </div>
@@ -45,17 +45,17 @@ function Hero() {
 
 function TestimonialCard() {
   return (
-    <div className="italic">
+    <div className="mt-6 md:mt-0 md:px-2 italic">
       <p className="text-base text-gray-500 text-balance">
         "Grace is a gem in the culinary world. The ambiance exudes
         sophistication, while the service is attentive and warm. The dishes?
         Pure artistry on a plate, crafted with the finest ingredients. It's a
         haven for anyone who appreciates gourmet dining."
       </p>
-      <p className="mt-2 font-medium text-orange-400 font-playfair">
+      <p className="sm:mt-2 text-base font-medium text-orange-400 font-playfair">
         ~ David Martinez
       </p>
-      <p className="mt-1 font-thin text-gray-400 text-sm/7">
+      <p className="-mt-2 md:-mt-1 font-thin text-gray-400 text-xs/7">
         Food Enthusiast and Connoisseur
       </p>
     </div>
@@ -64,8 +64,11 @@ function TestimonialCard() {
 
 function Testimonials() {
   return (
-    <div className="py-16 px-28">
-      <div className="gap-4 md:flex">
+    <div className=" pb-0 md:pb-16 py-6 md:py-16 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28">
+      <h2 className="text-xl sm:text-4xl italic font-medium text-orange-600 font-playfair -mb-3 md:mb-6">
+        Testimonials
+      </h2>
+      <div className="md:gap-4 sm:flex">
         <TestimonialCard />
         <TestimonialCard />
         <TestimonialCard />
@@ -88,24 +91,24 @@ function MenuOverview({
   alt?: string;
 }) {
   return (
-    <div className="flex justify-center gap-5  _bg-yellow-500">
-      <div className="relative flex ml-0 overflow-hidden w-96 shrink-0 aspect-square">
+    <div className="flex flex-col _justify-center gap-5 ring ring-black/5 bg-white">
+      <div className="relative flex ml-0 overflow-hidden _w-96 flex-shrink-0 md:shrink-0 aspect-square">
         <img
           src={img}
-          className="absolute inset-x-0 top-0 object-cover w-full aspect-square"
+          className="absolute inset-0 top-0 object-cover w-full aspect-square"
           alt=""
         />
       </div>
 
-      <div className="flex flex-col justify-between _bg-lime-400">
+      <div className="flex flex-col px-3 pb-4 justify-between _bg-lime-400">
         <div>
-          <h2 className="pt-4 pb-2 text-3xl font-medium max-w-72 font-playfair">
+          <h2 className="md:pt-1 pb-1 md:pb-2 text-lg md:text-3xl font-medium _leading-5 max-w-72 font-playfair">
             {title}
           </h2>
-          <p className="wrap text-gray-500 max-w-72">{children}</p>
+          <p className="wrap text-gray-500  text-xs max-w-72">{children}</p>
         </div>
-        <div>
-          <div className="inline-flex px-4 py-3 text-white bg-gray-950">
+        <div className="mt-4">
+          <div className="inline-flex px-2 py-1 md:px-4 md:py-3 text-white bg-gray-950">
             <a className="font-mono text-sm font-light" href={link}>
               see menu
             </a>
@@ -118,10 +121,14 @@ function MenuOverview({
 }
 function FeaturedMenus() {
   return (
-    <div className="py-10 px-28 _bg-red-700">
-      <div className="flex  flex-col gap-10">
+    <div className="py-10 px-4 _hidden sm:block sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28 _bg-gray-100/95">
+      <h2 className="text-xl sm:text-4xl italic font-medium text-orange-600 font-playfair mb-6">
+        Featured Menus
+      </h2>
+
+      <div className="_flex _flex-col grid grid-cols-1 md:grid-cols-2 gap-10">
         <MenuOverview
-          title="Enjoy Dates with Your Loved Ones"
+          title="Shared Moments"
           img="images/feature-4.jpg"
           link="/menu"
           alt="alt"
@@ -136,7 +143,7 @@ function FeaturedMenus() {
           alt="alt"
         >
           Start your day with our delicious breakfast options, featuring fresh
-          ingredients and delightful combinations.
+          ingredients and delightful dishes.
         </MenuOverview>
         <MenuOverview
           title="Lunch Favorites"
