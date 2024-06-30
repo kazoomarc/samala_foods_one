@@ -26,12 +26,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} h-full`}>
       <head>
+        <link rel="icon" href="/images/samala-ico-mini.png" sizes="any"></link>
+        <meta property="og:image" content="/images/samala-logo.jpg" />
         <link
           rel="stylesheet"
           href="https://api.fontshare.com/css?f[]=switzer@400,500,600&display=swap"
         />
       </head>
-      <body className="font-switzer flex flex-col justify-between h-full">
+      <body className="flex flex-col justify-between h-full font-switzer">
         <Header />
         {children}
         <Footer />
