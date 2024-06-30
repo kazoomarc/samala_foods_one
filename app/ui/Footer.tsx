@@ -4,7 +4,7 @@ import AwayArrow from './AwayArrow';
 export default function Footer() {
   return (
     <div className="mb-0 mt-14">
-      <div className="justify-between gap-24 px-4 py-12 bg-gray-300 _sm:flex _sm:flex-wrap md:justify-end _text-white _bg-orange-400 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28">
+      <div className="justify-between gap-24 px-4 py-12 bg-gray-300 sm:flex _sm:flex-wrap md:justify-end _text-white _bg-orange-400 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28">
         <div className="mt-6 md:mt-0">
           <h3 className="font-bold _text-2xl _sm:text-base ">opening hours</h3>
 
