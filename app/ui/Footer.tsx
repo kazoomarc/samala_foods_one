@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import AwayArrow from './AwayArrow';
 
 export default function Footer() {
@@ -35,27 +36,34 @@ export default function Footer() {
         <div className="mt-6 md:mt-0">
           <h3 className="font-bold _text-2xl _sm:text-base">social</h3>
           <div className="mt-3 space-y-1">
-            <div className="text-xs font-mono flex gap-[2px]">
-              <span>(X) twitter</span>
-              <AwayArrow className="size-2" />
-            </div>
-            <div className="text-xs font-mono flex gap-[2px]">
-              <span>instagram</span>
-              <AwayArrow className="size-2" />
-            </div>
+            <Link href="https://x.com/datamoree">
+              <div className="text-xs font-mono flex gap-[2px] p-[2px]">
+                <span>(x) twitter</span>
+                <AwayArrow className="size-2" />
+              </div>
+            </Link>
 
-            <div className="text-xs font-mono flex gap-[2px]">
-              <span>facebook </span>
-              <AwayArrow className="size-2" />
-            </div>
+            <Link href="https://x.com/datamoree">
+              <div className="text-xs font-mono flex gap-[2px] p-[2px]">
+                <span>instagram</span>
+                <AwayArrow className="size-2" />
+              </div>
+            </Link>
+
+            <Link href="https://x.com/datamoree">
+              <div className="text-xs font-mono flex gap-[2px] p-[2px]">
+                <span>facebook</span>
+                <AwayArrow className="size-2" />
+              </div>
+            </Link>
           </div>
         </div>
       </div>
       <div className="px-4 py-4 text-xs text-white bg-black _bg-orange-500 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-28">
         <span>
-          <a href="#" className="font-mono">
+          <Link href="https://x.com/datamoree" className="font-mono">
             &copy; Joel Mwala 2024
-          </a>
+          </Link>
         </span>
       </div>
     </div>
