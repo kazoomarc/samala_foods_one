@@ -195,7 +195,7 @@ function MenuCard({
   return (
     <div className="flex flex-col gap-5 bg-white _justify-center ring ring-black/5">
       <div className="relative flex flex-shrink-0 ml-0 overflow-hidden _w-96 md:shrink-0 aspect-square">
-        <Image src={img} alt="alt" quality={50} fill />
+        <Image src={img} alt="alt" quality={50} fill className="object-cover" />
 
         {/* <img
           src={img}
